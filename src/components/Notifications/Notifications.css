@@ -1,0 +1,18 @@
+.notification-content {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 10px var(--light-gray);
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+}
+.notification-info {
+    margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .notification-content {
+        flex-direction: column;
+    }
+}

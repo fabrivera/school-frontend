@@ -1,0 +1,42 @@
+.route {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+}
+
+.route div {
+    color: var(--primary);
+    font-weight: 400;
+    cursor: pointer;
+}
+.route div span {
+    transition: .1s;
+    padding: .2rem .5rem;
+    border-radius: .2rem;
+}
+.route div:hover span{
+    font-size: 1.1rem;
+}
+.route div:hover:last-child span{
+    font-size: 1rem;
+}
+.route div::after {
+    content: "/";
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--gray);
+    margin: 0 .6rem;
+}
+.route div:last-child {
+    color: var(--gray);
+    font-weight: 500;
+    padding-left: .5rem;
+    cursor: default;
+}
+.route div:last-child::after {
+    content: "";
+}

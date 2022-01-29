@@ -1,0 +1,210 @@
+.all-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255,255,255,.7);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+}
+.all-loading h1 {
+    margin-top: 1.2rem;
+    font-size: 1.7rem;
+    color: rgb(104, 104, 104);
+}
+.all-loading h1 span {
+    opacity: 0;
+    animation-name: punto;
+    animation-duration: 1.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.late1{
+    animation-delay: .4s;
+}
+.late2{
+    animation-delay: .8s;
+}
+.loading-container {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: rebotar 3s ease-in-out infinite;
+}
+.loading1 {
+    position: absolute;
+    width: 10rem;
+    height: 5.7rem;
+    opacity: 0;
+    background: #650B78;
+    animation: rec1 3s ease-in-out infinite;
+}
+.loading2 {
+    position: absolute;
+    width: 10rem;
+    height: 5.7rem;
+    opacity: 0;
+    background: #650B78;
+    animation: rec2 3s ease-in-out infinite;
+}
+.loading3 {
+    position: absolute;
+    width: 10rem;
+    opacity: 0;
+    height: 5.7rem;
+    background: #650B78;
+    animation: rec3 3s ease-in-out infinite;
+}
+.logo {
+    position: absolute;
+    display: flex;
+    top: 3.72rem;
+    justify-content: center;
+    align-items: center;
+    animation: chico 3s ease-in-out infinite;
+}
+.aplastar {
+    transform: scaleY(.58);
+}
+.logo1 {
+    position: absolute;
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: #E6E7E8;
+    transform: rotate(45deg);
+}
+.logo2 {
+    position: absolute;
+    top: 2.2rem;
+    left: -2.7rem;
+    width: 2.7rem;
+    height: 1.8rem;
+    background-color: #BDBFC1;
+    transform: skewY(30deg);
+}
+.logo3 {
+    position: absolute;
+    top: 2.2rem;
+    right: -2.7rem;
+    width: 2.7rem;
+    height: 1.8rem;
+    background-color: #FFFFFF;
+    transform: skewY(-30deg);
+}
+
+@keyframes rec1 {
+    0% {
+        width: 5.7rem;
+        border-radius: 50%;
+        opacity: 1;
+        transform: rotate(-60deg);
+    }
+    25%, 75% {
+        width: 10rem;
+        border-radius: 0%;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    100% {
+        width: 5.7rem;
+        opacity: 1;
+        border-radius: 50%;
+        transform: rotate(60deg);
+    }
+}
+@keyframes rec2 {
+    0% {
+        width: 5.7rem;
+        opacity: 1;
+        border-radius: 50%;
+        transform: rotate(0deg);
+    }
+    25%, 75% {
+        width: 10rem;
+        border-radius: 0%;
+        opacity: 1;
+        transform: rotate(60deg);
+    }
+    100% {
+        width: 5.7rem;
+        border-radius: 50%;
+        opacity: 1;
+        transform: rotate(120deg);
+    }
+}
+@keyframes rec3 {
+    0% {
+        width: 5.7rem;
+        border-radius: 50%;
+        opacity: 1;
+        transform: rotate(60deg);
+    }
+    25%, 75% {
+        width: 10rem;
+        border-radius: 0%;
+        opacity: 1;
+        transform: rotate(120deg);
+    }
+    100% {
+        width: 5.7rem;
+        border-radius: 50%;
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+}
+@keyframes rebotar {
+    0% {
+        transform: scale(.6);
+    }
+    20% {
+        transform: scale(1.2);
+    }
+    30% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(.6);
+    }
+}
+@keyframes chico {
+    0% {
+        opacity: .1;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .1;
+    }
+}
+@keyframes punto {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
